@@ -7,7 +7,6 @@ React ile oluşturulmuş MyWork isimli basit ve kullanıcı dostu bir Todo uygul
 - **Yeni Görev Ekleme:** Todo listenize kolayca yeni görevler ekleyin.
 - **Görev Silme:** Artık gerekmeyen görevleri kaldırın.
 - **Görev Tamamlama:** Görevlerinizi tamamlayarak ilerlemenizi takip edin.
-- **Duyarlı Tasarım:** Uygulama tamamen duyarlı olup hem mobil hem de masaüstü cihazlarda çalışır.
 
 ## Kullanılan Teknolojiler
 
