@@ -51,7 +51,6 @@ export const MyWorkSlice = createSlice({
                 state.tasks = state.tasks.filter(task => task.id !== taskIdToDelete);
             else {
                 const taskPlace = action.payload?.taskPlace
-                console.log("taskPlace", taskPlace)
                 state[taskPlace] = state[taskPlace].filter(task => task.id !== taskIdToDelete);
                 state.tasks = state.tasks.filter(task => task.id !== taskIdToDelete);
             }
