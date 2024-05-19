@@ -1,4 +1,4 @@
-# ReactTodoApp
+# MyWork
 
 React ile oluşturulmuş MyWork isimli basit ve kullanıcı dostu bir Todo uygulaması. Bu uygulama, kullanıcıların günlük görevlerini verimli bir şekilde yönetmelerine yardımcı olur; görev ekleme, silme ve tamamlama gibi özellikler sunar.
 
