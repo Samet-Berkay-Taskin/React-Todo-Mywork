@@ -25,7 +25,7 @@ Bu projeyi yerel olarak kurmak ve çalıştırmak için aşağıdaki adımları 
 
 2. Proje dizinine gidin:
     ```bash
-    cd mywork
+    cd React-todo-Mywork
     ```
 
 3. Bağımlılıkları yükleyin:
