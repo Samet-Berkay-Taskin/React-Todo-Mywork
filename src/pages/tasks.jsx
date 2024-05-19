@@ -86,13 +86,13 @@ const Tasks = () => {
                     ))) : (<><p>Herhangi bir görev bulunmamakta...</p></>)}
 
                 {completedTasks.length !== 0 ? (
-                    <Accordion>
+                    <Accordion style={{marginTop: '20px'}}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
-                            Tamamlandı   {completedTasks.length}
+                            Tüm Tamamlananlar   {completedTasks.length}
                         </AccordionSummary>
                         <AccordionDetails>
                             {
