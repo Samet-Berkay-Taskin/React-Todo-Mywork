@@ -128,7 +128,6 @@ function Navbar() {
     React.useEffect(() => {
         if (location.pathname !== '/search') {
             setSearched('')
-            console.log(searched)
         }
     }, [location.pathname])
 

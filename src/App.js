@@ -7,7 +7,6 @@ import Login from "./pages/login";
 
 function App() {
   const isLoggedIn = useSelector((state) => (state.myWork.isLoggedIn));
-console.log(isLoggedIn)
   return (
     <>
       {isLoggedIn ?
