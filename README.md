@@ -1,6 +1,6 @@
 # ReactTodoApp
 
-React ile oluşturulmuş basit ve kullanıcı dostu bir Todo uygulaması. Bu uygulama, kullanıcıların günlük görevlerini verimli bir şekilde yönetmelerine yardımcı olur; görev ekleme, silme ve tamamlama gibi özellikler sunar.
+React ile oluşturulmuş MyWork isimli basit ve kullanıcı dostu bir Todo uygulaması. Bu uygulama, kullanıcıların günlük görevlerini verimli bir şekilde yönetmelerine yardımcı olur; görev ekleme, silme ve tamamlama gibi özellikler sunar.
 
 ## Özellikler
 
@@ -21,12 +21,12 @@ Bu projeyi yerel olarak kurmak ve çalıştırmak için aşağıdaki adımları 
 
 1. Depoyu klonlayın:
     ```bash
-    git clone https://github.com/kullaniciadi/ReactTodoApp.git
+    git clone https://github.com/Samet-Berkay-Taskin/React-todo-Mywork.git
     ```
 
 2. Proje dizinine gidin:
     ```bash
-    cd ReactTodoApp
+    cd mywork
     ```
 
 3. Bağımlılıkları yükleyin:
@@ -40,18 +40,3 @@ Bu projeyi yerel olarak kurmak ve çalıştırmak için aşağıdaki adımları 
     ```
 
 5. Tarayıcınızı açın ve `http://localhost:3000` adresine gidin.
-
-## Kullanım
-
-1. Uygulamayı açın.
-2. Girdi alanına yazarak ve "Ekle" düğmesine basarak görev ekleyin.
-3. Görevleri tamamlamak için üzerlerine tıklayın.
-4. Her görevin yanındaki silme düğmesine tıklayarak görevleri silin.
-
-## Katkıda Bulunma
-
-Katkılar memnuniyetle karşılanır! Bu depoyu fork edin ve iyileştirmeler veya hata düzeltmeleri için bir pull request gönderin.
-
-## Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
