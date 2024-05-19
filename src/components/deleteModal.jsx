@@ -26,7 +26,7 @@ const DeleteModal = (props) => {
     const setClose = () => {
         dispatch(setOpen(false))
     }
-
+    console.log(item)
     const deleteItem = (item) => {
         switch (item.deletedLocation) {
             case 'toDay':

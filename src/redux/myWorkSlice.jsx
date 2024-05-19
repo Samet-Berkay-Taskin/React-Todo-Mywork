@@ -7,6 +7,8 @@ const initialState = {
     tasks: [],
     completedTasks: [],
     isOpen: false,
+    search: '',
+    isLoggedIn: false
 }
 
 export const MyWorkSlice = createSlice({
@@ -62,6 +64,12 @@ export const MyWorkSlice = createSlice({
         },
         setOpen: (state, action) => {
             state.isOpen = action.payload
+        },
+        setSearchTask: (state, action) => {
+            state.search = action.payload;
+        },
+        setIsLoggedIn: (state, action) => {
+            state.isLoggedIn = action.payload
         }
     },
 })
@@ -77,7 +85,9 @@ export const {
     deteleteTask,
     addCompletedTask,
     deleteCompletedTask,
-    setOpen
+    setOpen,
+    setSearchTask,
+    setIsLoggedIn
 } = MyWorkSlice.actions
 
 export default MyWorkSlice.reducer

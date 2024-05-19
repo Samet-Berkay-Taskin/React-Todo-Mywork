@@ -6,16 +6,14 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { setIsLoggedIn, setSearchTask } from '../redux/myWorkSlice';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -60,11 +58,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Navbar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const [searched, setSearched] = React.useState("")
+    const [reset, setReset] = React.useState(false)
+    const dispatch = useDispatch();
+    const location = useLocation()
     const navigate = useNavigate()
 
-
     const isMenuOpen = Boolean(anchorEl);
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -87,6 +87,7 @@ function Navbar() {
     const exitPage = () => {
         navigate('/login')
         handleMenuClose()
+        dispatch(setIsLoggedIn(false));
     }
 
     const menuId = 'primary-search-account-menu';
@@ -109,7 +110,27 @@ function Navbar() {
             <MenuItem onClick={() => goProfile()}>Profil</MenuItem>
             <MenuItem onClick={() => exitPage()}>Çıkış</MenuItem>
         </Menu>
-    );
+    )
+
+    const handleSearch = () => {
+        if (searched) {
+            navigate('/search');
+            dispatch(setSearchTask(searched.toLocaleLowerCase()));
+        }
+        else
+            navigate('/')
+    }
+
+    React.useEffect(() => {
+        handleSearch();
+    }, [searched]);
+
+    React.useEffect(() => {
+        if (location.pathname !== '/search') {
+            setSearched('')
+            console.log(searched)
+        }
+    }, [location.pathname])
 
     return (
         <Box sx={{ flexGrow: 1, width: '100%', height: '100%' }}>
@@ -133,6 +154,8 @@ function Navbar() {
                         <StyledInputBase
                             placeholder="Ara..."
                             inputProps={{ 'aria-label': 'search' }}
+                            onChange={(e) => setSearched(e.target.value)}
+                            value={searched}
                         />
                     </Search>
 
