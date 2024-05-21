@@ -38,4 +38,7 @@ Bu projeyi yerel olarak kurmak ve çalıştırmak için aşağıdaki adımları 
     npm start
     ```
 
-5. Tarayıcınızı açın ve `http://localhost:3000` adresine gidin.
+5. Tarayıcınızı açın ve `http://localhost:3000` adresine gidin
+kullanıcı adı:Berkay_Taşkın
+şifre:berkay1234
+şeklinde giriş yapabilirsiniz.
